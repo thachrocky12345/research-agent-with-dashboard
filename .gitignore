@@ -7,7 +7,6 @@ build/
 .eggs/
 *.egg
 
-.env
 .venv/
 venv/
 ENV/
@@ -22,3 +21,5 @@ run.log
 .DS_Store
 uv.lock
 .next/
+config.bat
+node_modules
