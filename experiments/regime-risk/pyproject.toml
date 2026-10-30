@@ -1,0 +1,15 @@
+[project]
+name = "regime-risk"
+version = "0.1.0"
+description = "Forward-risk research sprint. Run with the backend venv, not a separate install."
+requires-python = ">=3.11"
+dependencies = [
+  "numpy",
+  "pandas",
+  "scipy",
+  "scikit-learn",
+  "lightgbm",
+  "statsmodels",
+  "fredapi",
+  "hmmlearn",
+]

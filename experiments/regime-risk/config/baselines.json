@@ -1,0 +1,21 @@
+{
+  "B0": {
+    "classification": "rolling 3-year base rate",
+    "regression": "trailing 20-day realized vol",
+    "role": "sanity"
+  },
+  "B1": {
+    "features": ["log_rv20", "log_vix", "rv5_over_rv20"],
+    "model": "logistic for classification, ridge for regression",
+    "protocol": "same walk-forward as the candidate",
+    "role": "the gate"
+  },
+  "HAR": {
+    "features": ["rv1", "rv5", "rv22"],
+    "model": "HAR-RV regression",
+    "role": "T_rv gate"
+  },
+  "BH": {"rule": "buy and hold SPY", "role": "economic"},
+  "DMA": {"rule": "long when close > 200-day MA, else cash", "role": "economic"},
+  "VT": {"rule": "exposure = min(1, 0.15 / RV20)", "role": "economic, reported"}
+}

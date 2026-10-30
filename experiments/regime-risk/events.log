@@ -1,0 +1,12 @@
+# AutoResearch Kit — Events Log
+# Format: [YYYY-MM-DD HH:MM:SS] [exp#NNN] EVENT_TYPE: description
+#
+# Event types:
+#   SESSION_START   — new research session begins
+#   BASELINE        — baseline metric established
+#   INSIGHT         — significant finding worth highlighting
+#   FLAG            — agent recommendation for human review
+#   PHASE_ADVANCE   — human approved a phase transition
+#   SESSION_END     — session complete with summary
+
+[2026-10-29 19:07:35] [exp#000] SESSION_START: T1.1 scaffold regime-risk

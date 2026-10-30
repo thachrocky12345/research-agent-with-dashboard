@@ -1,0 +1,21 @@
+{
+  "primary_symbol": "spy",
+  "second_symbol": "qqq",
+  "measured_from": "close_t",
+  "forward_days": 5,
+  "targets": {
+    "T_down": {
+      "type": "classification",
+      "definition": "1 if the close-to-close return over the next 5 trading days < -0.02"
+    },
+    "T_volexp": {
+      "type": "classification",
+      "definition": "1 if next-5-day realized vol (sqrt of sum of daily log-return squared, annualized) > trailing 60-day median of that 5-day RV series"
+    },
+    "T_rv": {
+      "type": "regression",
+      "definition": "log of next-5-day realized vol"
+    }
+  },
+  "holdout_rule": "A target at date t uses the forward window t+1 onward. That window must not cross into the holdout when the row is used for development or validation."
+}

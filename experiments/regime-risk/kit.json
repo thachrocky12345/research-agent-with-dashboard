@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "name": "regime-risk",
+  "description": "Predict forward risk on SPY and QQQ. Score skill against a vol-only baseline, then test whether that skill cuts drawdown without giving up Sharpe after costs.",
+  "created_at": "2026-10-29T00:00:00Z",
+  "metric": {
+    "primary": "bss_vs_B1",
+    "direction": "higher",
+    "explanation": "Brier skill score against the vol-only baseline B1. 0 means the model is no better than trailing volatility and VIX. 0.05 is the pre-registered gate. Higher is better. There is no floor: a negative score means the model is worse than B1 and the gate fails.",
+    "floors": {},
+    "phases": null,
+    "composite_formula": null
+  },
+  "eval_command": "TBD until T1.5",
+  "parse_command": "grep '^bss_vs_b1:' run.log",
+  "mutable_files": ["models/logit_l2.py", "models/ridge_rv.py", "models/lgbm.py"],
+  "immutable_files": ["laws.md"],
+  "read_files": ["program.md", "journal.md", "laws.md"],
+  "write_files": ["results.tsv", "journal.md", "events.log"],
+  "columns": ["commit", "task", "split", "target", "model", "feature_set", "metric", "value", "baseline", "skill", "n", "status", "description"],
+  "status_values": ["baseline", "keep", "discard", "crash"],
+  "time_budget_minutes": 10,
+  "timeout_minutes": 20,
+  "data_description": "Daily bars from stockdb stock_data on 192.168.1.196 via get_daily_bars, using adjclose for returns. Intraday Tier A reads frozen 15-minute cells and signal pools under experiments/indicator-combo/data. No market.stock_* queries.",
+  "data_verify_command": "test -f config/splits.json && test -f config/targets.json",
+  "branch_pattern": "autoresearch/{tag}",
+  "context": "Four-week forward-risk sprint. Indicator strategies are closed. Every model must beat the vol-only baseline B1. Holdout 2022-01-03 through 2024-09-27 is human-only and runs once.",
+  "goals": "Find whether features beyond trailing vol and VIX predict 5-day downside, vol expansion, or realized vol well enough to reduce drawdown versus buy-and-hold at equal or better Sharpe after 2 bps per side."
+}
