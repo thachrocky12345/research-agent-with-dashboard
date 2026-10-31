@@ -1,0 +1,7 @@
+source	hash	signal_type	direction	h	n_signals	n_cells	excess	ci_lo	ci_hi	excess_bps	excess_atr	mean_cost	hit_signal	hit_base	frac_cells_positive	ci_excludes_0
+control	cheat	CHEAT	bullish	2	8084	25	0.001742	0.001650	0.001842	17.42	0.586434	0.000661	0.7350	0.4953	1.0000	1
+control	cheat	CHEAT	bullish	4	8084	25	0.003679	0.003526	0.003854	36.79	1.244164	0.000661	1.0000	0.5107	1.0000	1
+control	cheat	CHEAT	bullish	8	8069	25	0.003741	0.003489	0.004006	37.41	1.249404	0.000661	0.7738	0.5266	1.0000	1
+control	cheat	CHEAT	bullish	26	8048	25	0.003610	0.002958	0.004249	36.10	1.251020	0.000661	0.6595	0.5515	1.0000	1
+control	cheat	CHEAT	bullish	78	7995	25	0.002994	0.001830	0.004161	29.94	1.067191	0.000662	0.6418	0.5907	1.0000	1
+control	cheat	CHEAT	bullish	130	7930	25	0.002685	0.001059	0.004239	26.85	0.988338	0.000663	0.6460	0.6150	0.9200	1

@@ -11,7 +11,7 @@
     "phases": null,
     "composite_formula": null
   },
-  "eval_command": "TBD until T1.5",
+  "eval_command": "/Users/thachbui/Documents/ultimate-stock-ai/backend/venv/bin/python evaluate_model.py --model {model} --target {target} --features {features} --split {split} --symbol {symbol}",
   "parse_command": "grep '^bss_vs_b1:' run.log",
   "mutable_files": ["models/logit_l2.py", "models/ridge_rv.py", "models/lgbm.py"],
   "immutable_files": ["laws.md"],

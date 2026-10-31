@@ -10,3 +10,11 @@
 #   SESSION_END     — session complete with summary
 
 [2026-10-29 19:07:35] [exp#000] SESSION_START: T1.1 scaffold regime-risk
+
+[2026-10-29 19:44:39] [exp#000] FLAG: T1.4 SPY HAR QLIKE does not beat trailing RV20. T1.3 causality PASS. Holdout not touched.
+
+[2026-10-29 19:51:35] [exp#000] FLAG: T2 dev grid done. T2.4 scored lgbm/full SPY once on val. T_down BSS 0.005. T_volexp BSS 0.415. T_rv not scored. Gate G2 not decided. Holdout not touched.
+[2026-10-29 19:54:18] [exp#000] FLAG: T2.4 val SPY lgbm full. T_down BSS 0.004752. T_volexp BSS 0.415123 positive in 3 years. T_rv skill vs HAR -0.258825. G2 file not written. Holdout not loaded.
+[2026-10-31 12:44:04] [exp#000] PHASE_ADVANCE: human said start phase 3. T3.2 and T3.3 run. T3.1 skipped. Holdout not loaded.
+[2026-10-31 12:44:05] [exp#000] FLAG: SPY val three mappings miss Sharpe>=BH. Binary 0.9407 vs 1.0868, DD -0.1180 vs -0.3410. GATE_G3.md not written.
+[2026-10-31 12:49:53] [exp#000] FLAG: T4.2 validation robustness done. T_volexp BSS CI 0.209 to 0.583. T_down BSS CI includes 0. Three exposure mappings have validation Sharpe below BH. Holdout not loaded. G2 G3 G4 not decided.

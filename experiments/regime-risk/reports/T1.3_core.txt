@@ -1,0 +1,19 @@
+rows 5795  after_warmup 5535  start 1999-03-10  end 2021-12-31
+columns log_ret_1,log_ret_5,log_ret_20,log_ret_60,rv5,rv20,rv60,rv5_over_rv20,dist_ma50,dist_ma200,ma200_slope_20,dd_252,volume_z_20,amihud_20,range_over_atr20,consec_down,qqq_minus_spy_20
+nan log_ret_1 847
+nan log_ret_5 847
+nan log_ret_20 847
+nan log_ret_60 847
+nan rv5 847
+nan rv20 847
+nan rv60 847
+nan rv5_over_rv20 847
+nan dist_ma50 847
+nan dist_ma200 847
+nan ma200_slope_20 847
+nan dd_252 847
+nan volume_z_20 20
+nan amihud_20 847
+nan range_over_atr20 0
+nan consec_down 0
+nan qqq_minus_spy_20 946
